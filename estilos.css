@@ -1,0 +1,227 @@
+:root{
+    --color-primario:#F3F5FC;
+    --color-secundario: #0A3871;
+    --color-terciario: #D8DFE8;
+    --color-cuarto: #FFFFFF;
+    --color-indicacion: #495057;
+    --color-notificacion: #343A40;
+    --color-hover: #1c3553;
+
+    --fuente-inter: "Inter", sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.presentacion{
+    display: flex;
+    padding: 3% 3%;
+    justify-content: space-between;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.campo_principal{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.logo{
+    width: 15%;
+    height: auto;
+}
+
+
+.espacio_texto{
+    width: 75%;
+    height: 100%;
+    padding: 0% 0% 0% 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+textarea{
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--color-secundario);
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+}
+
+textarea::placeholder{
+    color: var(--color-secundario);
+}
+
+.indicacion{
+    color: var(--color-indicacion);
+    font-family: var(--fuente-inter);
+    padding: 0% 0% 2%;
+    font-size: 0.75rem;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    align-items: center;
+    margin-top: auto;
+    padding-bottom: 32px;
+}
+
+button {
+    padding: 24px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: var(--fuente-inter);
+    width: 328px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-encriptar{
+    background-color: var(--color-secundario);
+    color: var(--color-cuarto);
+}
+
+button:hover{
+    border: 2px solid var(--color-secundario);
+    background-color: var(--color-hover);
+    color: var(--color-cuarto);
+}
+
+.boton-desencriptar{
+    border: 2px solid var(--color-secundario);
+    background-color: transparent;
+    color: var(--color-secundario);
+}
+
+.espacio_resultado {
+    width: 25%;
+    flex-grow: 1;
+    background-color: var(--color-cuarto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 32px;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative; 
+    padding: 32px;
+}
+
+.resultado {
+    display: none; 
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 150px);
+    padding-bottom: 32px;
+}
+
+.resultado-texto {
+    margin-bottom: auto; 
+    text-align: left;
+    overflow-wrap: break-word;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: var(--fuente-inter);
+    color: var(--color-indicacion);
+
+}
+
+.boton-copiar {
+    display: none;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.buscando{
+    width: 70%;
+    height: auto;
+    padding: 0% 0% 32px;
+}
+
+.notificacion{
+    padding: 0% 0% 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--fuente-inter);
+    color: var(--color-notificacion);
+}
+
+.mencion{
+    font-size: 1rem;
+    font-family: var(--fuente-inter);
+    color: var(--color-indicacion);
+}
+
+.footer{
+    width: 100%;
+    background-color: var(--color-secundario);
+    padding: 24px 0px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-inter);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+@media (max-width: 768px) {
+    .presentacion {
+        flex-direction: column;
+    }
+    
+    .campo_principal, .espacio_resultado {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .espacio_resultado {
+        margin-top: 20px;
+        padding: 30px 0px 30px 0px;
+    }
+
+    .resultado{
+        width: 100%;
+        padding: 0%;
+    }
+
+    .resultado-texto{
+        width: 90%;
+    }
+
+    .buscando {
+        display: none;
+    }
+
+    .boton-copiar{
+        width: 90%;
+        margin-top: 30px;
+    }
+}
+
+

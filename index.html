@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge-Roy</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <main class="presentacion">
+            <section class="campo_principal">
+                <img src="./imagenes/My logo.png" alt="mi logo" class="logo">
+                
+                <div class="espacio_texto">
+                    <textarea name="texto" id="campo_texto" placeholder="Ingrese su texto aqui"></textarea>
+                    <p class="indicacion"> <i class="fas fa-info-circle"></i> Solo letras minúsculas y sin acentos</p>
+                    <div class="botones">
+                        <button class="boton-encriptar">Encriptar</button>
+                        <button class="boton-desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+            <div class="espacio_resultado">
+                <img src="./imagenes/Buscando.png" alt="imagen de buscando" class="buscando">
+                <h2 class="notificacion">Ningún mensaje fue encontrado</h2>
+                <p class="mencion">Ingresa el texto que deseas encriptar o desencriptar</p>
+                <div class="resultado">
+                    <p id="resultado-texto" class="resultado-texto"></p>
+                    <button id="boton-copiar" class="boton-copiar">Copiar</button>
+                </div>
+            </div>
+        </main>
+    <footer class="footer">
+        <p>Desarrollado por Roy Sandoval - 2024</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
